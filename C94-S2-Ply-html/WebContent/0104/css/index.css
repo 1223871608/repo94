@@ -1,0 +1,128 @@
+@CHARSET "UTF-8";
+
+/*清除所有元素的内外边距*/
+*{
+	padding: 0px;
+	margin: 0px;
+}
+/*所有图片宽度默认100%*/
+img{
+	width:100%
+}
+
+header{
+	background: #eee
+}
+
+footer{
+	background: #ddd
+	clear:both;
+}
+
+main{
+	width: 1200px;
+	margin: auto
+}
+
+#content-left{
+	background: #aaa;
+	width: 900px;
+	float: left;
+}
+
+#content-right{
+	background:#999;
+	width: 290px;
+	float: right;
+}
+
+/********************************页头***************************/
+header>div{
+	background: #000;
+	color: #fff;
+}
+
+header>div>div{
+	width: 1200px;
+	margin:auto
+}
+
+/* 设定div 所有内部元素的垂直居中*/
+header>div>div>*{
+	vertical-align: middle;
+}
+
+header span{
+	height:50px;
+	line-height: 50px;
+	padding:0px  20px;
+	display: inline-block;
+}
+
+header>img{
+	display:block;
+}
+
+.right{
+	float:right
+}
+
+header span:hover{
+	background: #999
+}
+
+header input{
+	width: 200px;
+	background: #000;
+	color: #fff;
+	border-width: 0px 0px 2px;
+	padding: 15px 0px 10px;
+	background: url(../imgs/icon/search.png) no-repeat right center;
+}
+
+/*************************** 主体内容:推荐文章*************************************/
+/*
+		1.div默认高度是内容的高度
+		2.如果div设置的高度低于内容高度,将会产生内容溢出
+		3.要避免内容溢出,使用overflow属性
+		:nth-child(1) 序号选择器
+*/
+
+.tj{
+	border-radius:5px; /*圆角边框 5px  是半径*/
+	overflow:hidden;
+}
+
+.tj>div:nth-child(1){
+	height:300px;
+	overflow:hidden;
+}
+
+.tj>div:nth-child(2){
+	background: #000;
+	color: #fff;
+	padding: 10px
+}
+main{
+	margin:10px auto;
+}
+
+/*设定left的背景色为"继承"(默认值), 无色*/
+#content-left{
+	background-color:inherit;
+}
+
+/******************主体内容:推荐文章  小*********************************/
+.xiao{
+	width:290px
+}
+
+.xiao>div:nth-child(1){
+	height:150px;
+}
+.left{
+	float:left
+}
+.tj:nth-child(4){
+	margin:auto
+}
